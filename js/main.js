@@ -58,3 +58,89 @@ inputField.onkeyup = function(event) {
             });
     }
 }
+
+const barGraph = document.getElementById("bar")
+const lineGraph = document.getElementById("line")
+const pieGraph = document.getElementById("pie")
+new Chart(barGraph, {
+    type: 'bar',
+    display: true,
+    data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
+        color: '#ffffff',
+        datasets: [{
+            backgroundColor: '#4aa86b',
+            label: 'time spend online',
+            data: [32, 87, 42, 61, 28, 12, 73],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        color: '#000',
+        scales: {
+            y: {
+                ticks: {
+                    color: '#000',
+                    beginAtZero: true
+                }
+            },
+            x: {
+                ticks: {
+                    color: '#000',
+                }
+            }
+        }
+    }
+});
+new Chart(lineGraph, {
+    type: 'line',
+    display: true,
+    data: {
+        labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
+        color: '#ffffff',
+        datasets: [{
+            backgroundColor: '#92f0b3',
+            label: 'when i feel sleepy',
+            data: [32, 87, 42, 61, 28, 12, 73],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        color: '#000',
+        scales: {
+            y: {
+                ticks: {
+                    color: '#000',
+                    beginAtZero: true
+                }
+            },
+            x: {
+                ticks: {
+                    color: '#000',
+                }
+            }
+        }
+    }
+});
+new Chart(pieGraph, {
+    type: 'pie',
+    display: true,
+    data: {
+        labels:[
+            'skill',
+            'prog',
+            'flex'
+        ],
+        color: '#ffffff',
+        datasets: [{
+            backgroundColor: [
+                '#0f7d36',
+                '#4c6153',
+                '#93baa1'
+            ],
+            label: 'homework ',
+            data: [32, 87, 42],
+            borderWidth: 1
+        }]
+    },
+});

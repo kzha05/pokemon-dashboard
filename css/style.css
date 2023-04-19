@@ -52,7 +52,7 @@ body{
 
 .card--second{
   grid-column: 5 / 13;
-  grid-row: 1 / 9;
+  grid-row: 1 / 8;
   padding: 4rem;
 }
 
@@ -83,16 +83,31 @@ body{
   border-radius: 0.5rem;
 }
 
+.card--fourth{
+  grid-row: 8 / 13;
+  grid-column: 5 / 8;
+}
+
+.card--fifth{
+  grid-row: 8 / 13;
+  grid-column:  8 / 11;
+}
+
+.card--sixth{
+  grid-row: 8 / 13;
+  grid-column: 11 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 87.5rem) {
-  .card--second{
+  .card--sixth{
     grid-row: 1 / 13;
+    grid-column: 1 / 13;
   }
 
-  .card--third{
-    grid-column: 1 /5;
-  }
-
-  .card--first, .card--second{
+  .card--first, .card--second, .card--third, .card--fourth, .card--fifth{
     display: none;
   }
 }
